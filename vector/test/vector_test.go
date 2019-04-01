@@ -2,8 +2,6 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/vector"
 	"testing"
 )
 

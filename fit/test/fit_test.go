@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/fit"
+	"github.com/liuhaoXD/gogsl/fit"
 	"math"
 	"testing"
 )

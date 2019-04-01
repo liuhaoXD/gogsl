@@ -67,7 +67,7 @@ package vector
 import "C"
 
 import (
-	"github.com/dtromb/gogsl"
+	"github.com/liuhaoXD/gogsl"
 	"reflect"
 	"unsafe"
 )

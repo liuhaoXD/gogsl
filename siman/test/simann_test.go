@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/rng"
-	"github.com/dtromb/gogsl/siman"
+	"github.com/liuhaoXD/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/siman"
 	"math"
 	"testing"
 )
@@ -30,7 +30,7 @@ var T_MIN float64 = 2.0e-6
 /* now some functions to test in one dimension */
 func E1(params interface{}) float64 {
 	x := *params.(*float64)
-	res := math.Exp(-math.Pow((x-1.0), 2.0)) * math.Sin(8*x)
+	res := math.Exp(-math.Pow((x - 1.0), 2.0)) * math.Sin(8*x)
 	//fmt.Printf("E(%f) = %g\n", x, res)
 	return res
 }

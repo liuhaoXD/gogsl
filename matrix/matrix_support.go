@@ -24,7 +24,7 @@ package matrix
 import "C"
 
 import (
-	"github.com/dtromb/gogsl"
+	"github.com/liuhaoXD/gogsl"
 	"unsafe"
 )
 

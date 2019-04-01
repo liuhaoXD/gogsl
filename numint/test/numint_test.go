@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/numint"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/numint"
 	"math"
 	"testing"
 )

@@ -2,8 +2,6 @@ package stats
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/sort"
-	"github.com/dtromb/gogsl/stats"
 	"testing"
 )
 

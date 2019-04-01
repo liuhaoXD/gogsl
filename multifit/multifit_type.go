@@ -8,9 +8,9 @@ package multifit
 import "C"
 
 import (
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/matrix"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/matrix"
+	"github.com/liuhaoXD/gogsl/vector"
 	"unsafe"
 )
 

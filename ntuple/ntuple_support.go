@@ -42,8 +42,8 @@ package ntuple
 import "C"
 
 import (
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/histogram"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/histogram"
 	"reflect"
 	"unsafe"
 )

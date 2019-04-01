@@ -292,7 +292,7 @@ var global_PACKAGES_BY_ENUM_TYPE map[string]string = make(map[string]string)
 
 func GslReferenceType(name string, fields []string) {
 	AddImport("unsafe")
-	AddImport("github.com/dtromb/gogsl")
+	AddImport("github.com/liuhaoXD/gogsl")
 	goTypeName := RestyleCNameToGo(name, true)
 	typedecl := fmt.Sprintf("type %s struct {\n   gogsl.GslReference\n", goTypeName)
 	for _, field := range fields {
@@ -737,8 +737,8 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_FUNCTION:
 			{
-				AddImport("github.com/dtromb/gogsl")
-				typeName := QualifyPackage("github.com/dtromb/gogsl", "GslFunction")
+				AddImport("github.com/liuhaoXD/gogsl")
+				typeName := QualifyPackage("github.com/liuhaoXD/gogsl", "GslFunction")
 				goArgTypes = append(goArgTypes, typeName)
 				buf = append(buf, fmt.Sprintf("%s *%s", arg, typeName)...)
 				if i < len(cArgNames)-1 {
@@ -747,8 +747,8 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_FUNCTION_FDF:
 			{
-				AddImport("github.com/dtromb/gogsl")
-				typeName := QualifyPackage("github.com/dtromb/gogsl", "GslFunctionFdf")
+				AddImport("github.com/liuhaoXD/gogsl")
+				typeName := QualifyPackage("github.com/liuhaoXD/gogsl", "GslFunctionFdf")
 				goArgTypes = append(goArgTypes, typeName)
 				buf = append(buf, fmt.Sprintf("%s *%s", arg, typeName)...)
 				if i < len(cArgNames)-1 {
@@ -757,8 +757,8 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_MONTE_FUNCTION:
 			{
-				AddImport("github.com/dtromb/gogsl")
-				typeName := QualifyPackage("github.com/dtromb/gogsl", "GslMonteFunction")
+				AddImport("github.com/liuhaoXD/gogsl")
+				typeName := QualifyPackage("github.com/liuhaoXD/gogsl", "GslMonteFunction")
 				goArgTypes = append(goArgTypes, typeName)
 				buf = append(buf, fmt.Sprintf("%s *%s", arg, typeName)...)
 				if i < len(cArgNames)-1 {
@@ -882,7 +882,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 	voidResult := cRetType[0] == "void"
 	dangleChk := string(buf)
 	if strings.HasSuffix(dangleChk, ", ") {
-		buf = []byte(dangleChk[0 : len(dangleChk)-2])
+		buf = []byte(dangleChk[0:len(dangleChk)-2])
 	}
 
 	switch len(cRetType) {
@@ -990,7 +990,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_COMPLEX:
 			{
-				AddImport("github.com/dtromb/gogsl/complex")
+				AddImport("github.com/liuhaoXD/gogsl/complex")
 				if global_IS_COMPLEX_PACKAGE {
 					body.preCall = append(body.preCall, fmt.Sprintf("_arg_%d := GoComplexToGsl(%s)", i, arg))
 				} else {
@@ -1000,7 +1000,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_COMPLEX_FLOAT:
 			{
-				AddImport("github.com/dtromb/gogsl/complex")
+				AddImport("github.com/liuhaoXD/gogsl/complex")
 				if global_IS_COMPLEX_PACKAGE {
 					body.preCall = append(body.preCall, fmt.Sprintf("_arg_%d := GoComplexFloatToGsl(%s)", i, arg))
 				} else {
@@ -1011,14 +1011,14 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 		case GSL_FUNCTION:
 			{
 				AddImport("unsafe")
-				fInit := QualifyPackage("github.com/dtromb/gogsl", "InitializeGslFunction")
+				fInit := QualifyPackage("github.com/liuhaoXD/gogsl", "InitializeGslFunction")
 				body.preCall = append(body.preCall, fmt.Sprintf("%s(%s)", fInit, arg))
 				argExprs[i] = fmt.Sprintf("(*C.gsl_function)(unsafe.Pointer(%s.CPtr()))", arg)
 			}
 		case GSL_FUNCTION_FDF:
 			{
 				AddImport("unsafe")
-				fInit := QualifyPackage("github.com/dtromb/gogsl", "InitializeGslFunctionFdf")
+				fInit := QualifyPackage("github.com/liuhaoXD/gogsl", "InitializeGslFunctionFdf")
 				body.preCall = append(body.preCall, fmt.Sprintf("%s(%s)", fInit, arg))
 				argExprs[i] = fmt.Sprintf("(*C.gsl_function_fdf)(unsafe.Pointer(%s.CPtr()))", arg)
 			}
@@ -1087,7 +1087,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 		case FILE:
 			{
 				AddImport("unsafe")
-				AddImport("github.com/dtromb/gogsl")
+				AddImport("github.com/liuhaoXD/gogsl")
 				body.preCall = append(body.preCall, fmt.Sprintf("_file_%d := C.fdopen(C.dup(C.int(%s.Fd())),(*C.char)(unsafe.Pointer(gogsl.APPEND_ONLY.Ptr())))", i, arg))
 				body.postCall = append(body.postCall, fmt.Sprintf("C.fclose(_file_%d)", i))
 				argExprs[i] = fmt.Sprintf("_file_%d", i)
@@ -1136,7 +1136,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_COMPLEX:
 			{
-				AddImport("github.com/dtromb/gogsl/complex")
+				AddImport("github.com/liuhaoXD/gogsl/complex")
 				if global_IS_COMPLEX_PACKAGE {
 					body.returnReplace = "GslComplexToGo(uintptr(unsafe.Pointer(&_result)))"
 				} else {
@@ -1145,7 +1145,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 			}
 		case GSL_COMPLEX_FLOAT:
 			{
-				AddImport("github.com/dtromb/gogsl/complex")
+				AddImport("github.com/liuhaoXD/gogsl/complex")
 				if global_IS_COMPLEX_PACKAGE {
 					body.returnReplace = "GslComplexFloatToGo(uintptr(unsafe.Pointer(&_result)))"
 				} else {
@@ -1163,7 +1163,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 		case GSL_REFERENCE:
 			{
 				if strings.HasSuffix(cRetType[0], "*") {
-					AddImport("github.com/dtromb/gogsl")
+					AddImport("github.com/liuhaoXD/gogsl")
 					body.preCall = append(body.preCall, fmt.Sprintf("_ref := %s", callExpr))
 					body.preCall = append(body.preCall, fmt.Sprintf("_result := &%s{}", goRetType))
 					body.postCall = append(body.postCall, fmt.Sprintf("gogsl.InitializeGslReference(_result, uintptr(unsafe.Pointer(_ref)))"))
@@ -1171,7 +1171,7 @@ func ConstructFunctionWrapper(cName string, cRetType []string, cArgTypes []strin
 					body.suppressCall = true
 				} else {
 					fmt.Println(cRetType[0])
-					AddImport("github.com/dtromb/gogsl")
+					AddImport("github.com/liuhaoXD/gogsl")
 					body.preCall = append(body.preCall, fmt.Sprintf("_ref := %s", callExpr))
 					body.preCall = append(body.preCall, fmt.Sprintf("_result := &%s{}", goRetType))
 					body.preCall = append(body.preCall, fmt.Sprintf("_result.CData = make([]byte, unsafe.Sizeof(_ref))"))
@@ -1606,7 +1606,7 @@ func main() {
 	global_PACKAGE_BASE_PATH = filepath.Join(gopath, "src")
 	flistBytes, err := ioutil.ReadFile(filepath.Join(
 		gopath, "src",
-		"github.com/dtromb/gogsl",
+		"github.com/liuhaoXD/gogsl",
 		"function-list",
 	))
 	flist := string(flistBytes)

@@ -2,9 +2,9 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/multimin"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/multimin"
+	"github.com/liuhaoXD/gogsl/vector"
 	"testing"
 )
 

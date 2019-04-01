@@ -2,13 +2,13 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/blas"
-	"github.com/dtromb/gogsl/matrix"
-	"github.com/dtromb/gogsl/multifit"
-	"github.com/dtromb/gogsl/randist"
-	"github.com/dtromb/gogsl/rng"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/blas"
+	"github.com/liuhaoXD/gogsl/matrix"
+	"github.com/liuhaoXD/gogsl/multifit"
+	"github.com/liuhaoXD/gogsl/randist"
+	"github.com/liuhaoXD/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/vector"
 	"math"
 	"testing"
 )

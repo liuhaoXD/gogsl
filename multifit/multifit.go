@@ -9,9 +9,9 @@ package multifit
 import "C"
 
 import "unsafe"
-import "github.com/dtromb/gogsl"
-import "github.com/dtromb/gogsl/vector"
-import "github.com/dtromb/gogsl/matrix"
+import "github.com/liuhaoXD/gogsl"
+import "github.com/liuhaoXD/gogsl/vector"
+import "github.com/liuhaoXD/gogsl/matrix"
 
 type GslMultifitLinearWorkspace struct {
 	gogsl.GslReference

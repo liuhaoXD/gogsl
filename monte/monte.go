@@ -10,8 +10,8 @@ package monte
 import "C"
 
 import "unsafe"
-import "github.com/dtromb/gogsl"
-import "github.com/dtromb/gogsl/rng"
+import "github.com/liuhaoXD/gogsl"
+import "github.com/liuhaoXD/gogsl/rng"
 import "reflect"
 
 type GslMontePlainState struct {

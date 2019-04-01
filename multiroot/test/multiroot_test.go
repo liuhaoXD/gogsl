@@ -2,10 +2,10 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/matrix"
-	"github.com/dtromb/gogsl/multiroot"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/matrix"
+	"github.com/liuhaoXD/gogsl/multiroot"
+	"github.com/liuhaoXD/gogsl/vector"
 	"testing"
 )
 

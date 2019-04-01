@@ -10,8 +10,8 @@ package permutation
 import "C"
 
 import "unsafe"
-import "github.com/dtromb/gogsl"
-import "github.com/dtromb/gogsl/vector"
+import "github.com/liuhaoXD/gogsl"
+import "github.com/liuhaoXD/gogsl/vector"
 import "os"
 
 type GslPermutation struct {

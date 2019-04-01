@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/monte"
-	"github.com/dtromb/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/monte"
+	"github.com/liuhaoXD/gogsl/rng"
 	"math"
 	"testing"
 )

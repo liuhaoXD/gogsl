@@ -15,12 +15,12 @@ To use the **gogsl** bindings in your program, you'll need to do the following:
     will suffice.
 * Get the distribution:
         
-                go get github.com/dtromb/gogsl
+                go get github.com/liuhaoXD/gogsl
 
 * Generate the bindings:
                 
-                cd dtromb/gogsl; go generate
-
+                cd liuhaoXD/gogsl; go generate
+18:26
 
     This step is necessary because the datatype sizes on various machines will differ, and the bindings need to be generated based on these. This necessarily means code will not be portable across architectures (the alternative would have been to use per-binding size-matched types, however Go would then require explicit casts when these were used!)
     
@@ -28,7 +28,7 @@ To use the **gogsl** bindings in your program, you'll need to do the following:
     
 *   Import and use the bindings:
     
-                import "github.com/dtromb/gogsl/<package>"
+                import "github.com/liuhaoXD18:26/gogsl/<package>"
 
     The bindings very closely follow the API, you should be able to use them in your code simply using the  [GSL Manual](https://www.gnu.org/software/gsl/manual) as a reference.
     

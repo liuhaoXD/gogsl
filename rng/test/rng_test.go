@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/rng"
 	"testing"
 )
 

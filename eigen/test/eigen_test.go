@@ -2,9 +2,9 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/eigen"
-	"github.com/dtromb/gogsl/matrix"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl/eigen"
+	"github.com/liuhaoXD/gogsl/matrix"
+	"github.com/liuhaoXD/gogsl/vector"
 	"os"
 	"testing"
 )

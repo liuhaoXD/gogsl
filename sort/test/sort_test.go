@@ -2,10 +2,10 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/permutation"
-	"github.com/dtromb/gogsl/rng"
-	"github.com/dtromb/gogsl/sort"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl/permutation"
+	"github.com/liuhaoXD/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/sort"
+	"github.com/liuhaoXD/gogsl/vector"
 	"testing"
 )
 

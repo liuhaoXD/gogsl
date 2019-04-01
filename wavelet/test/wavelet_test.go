@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/sort"
-	"github.com/dtromb/gogsl/wavelet"
+	"github.com/liuhaoXD/gogsl/sort"
+	"github.com/liuhaoXD/gogsl/wavelet"
 	"math"
 	"testing"
 )

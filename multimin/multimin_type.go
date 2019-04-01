@@ -8,8 +8,8 @@ package multimin
 import "C"
 
 import (
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/vector"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/vector"
 	"unsafe"
 )
 

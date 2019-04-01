@@ -8,7 +8,7 @@ package numint
 import "C"
 
 import "unsafe"
-import "github.com/dtromb/gogsl"
+import "github.com/liuhaoXD/gogsl"
 import "reflect"
 
 type GslIntegrationWorkspace struct {

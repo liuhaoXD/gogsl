@@ -9,8 +9,8 @@ import "C"
 
 import (
 	//"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/rng"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/rng"
 	"reflect"
 	"unsafe"
 )

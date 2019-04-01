@@ -17,7 +17,7 @@ import "C"
 
 import (
 	//"fmt"
-	"github.com/dtromb/gogsl"
+	"github.com/liuhaoXD/gogsl"
 	"reflect"
 	"unsafe"
 )

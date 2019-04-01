@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/blas"
-	"github.com/dtromb/gogsl/matrix"
+	"github.com/liuhaoXD/gogsl/blas"
+	"github.com/liuhaoXD/gogsl/matrix"
 	"testing"
 )
 

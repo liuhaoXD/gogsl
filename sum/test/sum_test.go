@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/sum"
+	"github.com/liuhaoXD/gogsl/sum"
 	"math"
 	"testing"
 )

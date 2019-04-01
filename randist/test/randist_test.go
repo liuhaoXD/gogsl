@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl/randist"
-	"github.com/dtromb/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/randist"
+	"github.com/liuhaoXD/gogsl/rng"
 	"testing"
 )
 

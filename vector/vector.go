@@ -9,10 +9,10 @@ package vector
 import "C"
 
 import "unsafe"
-import "github.com/dtromb/gogsl"
+import "github.com/liuhaoXD/gogsl"
 import "os"
 import "reflect"
-import complex_ "github.com/dtromb/gogsl/complex"
+import complex_ "github.com/liuhaoXD/gogsl/complex"
 
 type GslVector struct {
 	gogsl.GslReference

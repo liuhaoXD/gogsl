@@ -9,7 +9,7 @@ package multiset
 import "C"
 
 import "unsafe"
-import "github.com/dtromb/gogsl"
+import "github.com/liuhaoXD/gogsl"
 import "os"
 
 type GslMultiset struct {

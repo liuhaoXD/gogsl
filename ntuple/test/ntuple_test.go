@@ -1,10 +1,10 @@
 package test
 
 import (
-	"github.com/dtromb/gogsl/histogram"
-	"github.com/dtromb/gogsl/ntuple"
-	"github.com/dtromb/gogsl/randist"
-	"github.com/dtromb/gogsl/rng"
+	"github.com/liuhaoXD/gogsl/histogram"
+	"github.com/liuhaoXD/gogsl/ntuple"
+	"github.com/liuhaoXD/gogsl/randist"
+	"github.com/liuhaoXD/gogsl/rng"
 	"io/ioutil"
 	"os"
 	"testing"

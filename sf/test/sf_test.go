@@ -2,9 +2,9 @@ package test
 
 import (
 	"fmt"
-	"github.com/dtromb/gogsl"
-	"github.com/dtromb/gogsl/sf"
-	bessel "github.com/dtromb/gogsl/sf/bessel/cylindrical"
+	"github.com/liuhaoXD/gogsl"
+	"github.com/liuhaoXD/gogsl/sf"
+	bessel "github.com/liuhaoXD/gogsl/sf/bessel/cylindrical"
 	"math"
 	"testing"
 )

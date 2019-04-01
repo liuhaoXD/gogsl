@@ -76,7 +76,7 @@ package monte
 import "C"
 
 import (
-	"github.com/dtromb/gogsl"
+	"github.com/liuhaoXD/gogsl"
 	"os"
 	"reflect"
 	"unsafe"
